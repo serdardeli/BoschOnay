@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{50D26D5E-E384-43DB-ADDE-B36BFE1C9FA7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BoschOnay</RootNamespace>
+    <AssemblyName>BoschOnay</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>BoschOnay.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>BoschOnay.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1440.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1440.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1440.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1440.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1440.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1440.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Reporting, Version=12.2.18.1017, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik Reporting R3 2018\Bin\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.WebApi, Version=12.2.18.1017, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=12.2.18.1017, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=12.2.18.1017, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=12.2.18.1017, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik Reporting R3 2018\Bin\Telerik.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R3 2018\Bin40\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2018.3.910.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2018.3.910.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX R3 2018\Bin40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2018.3.904.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.3.910.40\AdditionalLibraries\Bin40\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AGIFormu.aspx.designer.vb">
+      <DependentUpon>AGIFormu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AGIFormu.aspx.vb">
+      <DependentUpon>AGIFormu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BoschOnay.Master.designer.vb">
+      <DependentUpon>BoschOnay.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BoschOnay.Master.vb">
+      <DependentUpon>BoschOnay.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BoschRapor05.designer.vb">
+      <DependentUpon>BoschRapor05.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BoschRapor05.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErbenSql.vb" />
+    <Compile Include="F20Onayla.aspx.designer.vb">
+      <DependentUpon>F20Onayla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="F20Onayla.aspx.vb">
+      <DependentUpon>F20Onayla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FBoschRapor01.aspx.designer.vb">
+      <DependentUpon>FBoschRapor01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBoschRapor01.aspx.vb">
+      <DependentUpon>FBoschRapor01.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FBoschRapor02.aspx.designer.vb">
+      <DependentUpon>FBoschRapor02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBoschRapor02.aspx.vb">
+      <DependentUpon>FBoschRapor02.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FBoschRapor03.aspx.designer.vb">
+      <DependentUpon>FBoschRapor03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBoschRapor03.aspx.vb">
+      <DependentUpon>FBoschRapor03.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FBoschRapor04.aspx.designer.vb">
+      <DependentUpon>FBoschRapor04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBoschRapor04.aspx.vb">
+      <DependentUpon>FBoschRapor04.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FBoschRapor05.aspx.designer.vb">
+      <DependentUpon>FBoschRapor05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FBoschRapor05.aspx.vb">
+      <DependentUpon>FBoschRapor05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FMainPage2.aspx.designer.vb">
+      <DependentUpon>FMainPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMainPage2.aspx.vb">
+      <DependentUpon>FMainPage2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FTatil.aspx.designer.vb">
+      <DependentUpon>FTatil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTatil.aspx.vb">
+      <DependentUpon>FTatil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FDenklestirme.aspx.designer.vb">
+      <DependentUpon>FDenklestirme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FDenklestirme.aspx.vb">
+      <DependentUpon>FDenklestirme.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FFMOnayla.aspx.designer.vb">
+      <DependentUpon>FFMOnayla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FFMOnayla.aspx.vb">
+      <DependentUpon>FFMOnayla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FMazOnay.aspx.designer.vb">
+      <DependentUpon>FMazOnay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FMazOnay.aspx.vb">
+      <DependentUpon>FMazOnay.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FParametre.aspx.designer.vb">
+      <DependentUpon>FParametre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FParametre.aspx.vb">
+      <DependentUpon>FParametre.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FSifre.aspx.designer.vb">
+      <DependentUpon>FSifre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FSifre.aspx.vb">
+      <DependentUpon>FSifre.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FTalep.aspx.designer.vb">
+      <DependentUpon>FTalep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FTalep.aspx.vb">
+      <DependentUpon>FTalep.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FUsersOnay.aspx.designer.vb">
+      <DependentUpon>FUsersOnay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUsersOnay.aspx.vb">
+      <DependentUpon>FUsersOnay.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FUsers.aspx.designer.vb">
+      <DependentUpon>FUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUsers.aspx.vb">
+      <DependentUpon>FUsers.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FYetkiOnay.aspx.designer.vb">
+      <DependentUpon>FYetkiOnay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYetkiOnay.aspx.vb">
+      <DependentUpon>FYetkiOnay.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FYetki.aspx.designer.vb">
+      <DependentUpon>FYetki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYetki.aspx.vb">
+      <DependentUpon>FYetki.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FYetkiTanimLogRaporu.aspx.designer.vb">
+      <DependentUpon>FYetkiTanimLogRaporu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYetkiTanimLogRaporu.aspx.vb">
+      <DependentUpon>FYetkiTanimLogRaporu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciTanimRaporu.aspx.designer.vb">
+      <DependentUpon>KullaniciTanimRaporu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciTanimRaporu.aspx.vb">
+      <DependentUpon>KullaniciTanimRaporu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GirisCikisRaporu.aspx.designer.vb">
+      <DependentUpon>GirisCikisRaporu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GirisCikisRaporu.aspx.vb">
+      <DependentUpon>GirisCikisRaporu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FYetkiTanimRaporu.aspx.designer.vb">
+      <DependentUpon>FYetkiTanimRaporu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FYetkiTanimRaporu.aspx.vb">
+      <DependentUpon>FYetkiTanimRaporu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MBosch.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BoschRapor01.designer.vb">
+      <DependentUpon>BoschRapor01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BoschRapor01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BoschRapor02.designer.vb">
+      <DependentUpon>BoschRapor02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BoschRapor02.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RBosch_MForm01.designer.vb">
+      <DependentUpon>RBosch_MForm01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RBosch_MForm01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BoschRapor03.designer.vb">
+      <DependentUpon>BoschRapor03.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BoschRapor03.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BoschRapor04.designer.vb">
+      <DependentUpon>BoschRapor04.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BoschRapor04.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TSSTalep.aspx.designer.vb">
+      <DependentUpon>TSSTalep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSSTalep.aspx.vb">
+      <DependentUpon>TSSTalep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZTest.aspx.designer.vb">
+      <DependentUpon>ZTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZTest.aspx.vb">
+      <DependentUpon>ZTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoschRapor05.resx">
+      <DependentUpon>BoschRapor05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FYetkiTanimLogRaporu.rdlc" />
+    <EmbeddedResource Include="KullaniciTanimRaporu.rdlc" />
+    <EmbeddedResource Include="GirisCikisRaporu.rdlc" />
+    <EmbeddedResource Include="FYetkiTanimRaporu.rdlc" />
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoschRapor01.resx">
+      <DependentUpon>BoschRapor01.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoschRapor02.resx">
+      <DependentUpon>BoschRapor02.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBosch_MForm01.resx">
+      <DependentUpon>RBosch_MForm01.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoschRapor03.resx">
+      <DependentUpon>BoschRapor03.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoschRapor04.resx">
+      <DependentUpon>BoschRapor04.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AGIFormu.aspx" />
+    <Content Include="BoschOnay.Master" />
+    <Content Include="FBoschRapor03.aspx" />
+    <Content Include="FBoschRapor04.aspx" />
+    <Content Include="FBoschRapor05.aspx" />
+    <Content Include="FMainPage2.aspx" />
+    <Content Include="FTatil.aspx" />
+    <Content Include="FUsersOnay.aspx" />
+    <Content Include="FYetkiOnay.aspx" />
+    <Content Include="FYetkiTanimLogRaporu.aspx" />
+    <Content Include="KullaniciTanimRaporu.aspx" />
+    <Content Include="GirisCikisRaporu.aspx" />
+    <Content Include="FYetkiTanimRaporu.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\buttonbarkod.png" />
+    <Content Include="Images\buttonexit.png" />
+    <Content Include="loading.gif" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ZTest.aspx" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Default.aspx" />
+    <Content Include="F20Onayla.aspx" />
+    <Content Include="FBoschRapor01.aspx" />
+    <Content Include="FBoschRapor02.aspx" />
+    <Content Include="FDenklestirme.aspx" />
+    <Content Include="FFMOnayla.aspx" />
+    <Content Include="firmaklogo_bosch.jpg" />
+    <Content Include="firmalogo_bosch.jpg" />
+    <Content Include="FMazOnay.aspx" />
+    <Content Include="FParametre.aspx" />
+    <Content Include="FSifre.aspx" />
+    <Content Include="FTalep.aspx" />
+    <Content Include="FUsers.aspx" />
+    <Content Include="FYetki.aspx" />
+    <Content Include="Images\buttonaccept.png" />
+    <Content Include="Images\buttonadd.png" />
+    <Content Include="Images\buttonbriefcase.png" />
+    <Content Include="Images\buttoncalculator.png" />
+    <Content Include="Images\buttoncalendar.png" />
+    <Content Include="Images\buttoncancel.png" />
+    <Content Include="Images\buttondelete.png" />
+    <Content Include="Images\buttonedit.png" />
+    <Content Include="Images\buttonexcel.png" />
+    <Content Include="Images\buttonfilter.png" />
+    <Content Include="Images\buttongeri.png" />
+    <Content Include="Images\buttongeri32.png" />
+    <Content Include="Images\buttonleft.png" />
+    <Content Include="Images\buttonovertime.png" />
+    <Content Include="Images\buttonovertime2.png" />
+    <Content Include="Images\buttonprinter.png" />
+    <Content Include="Images\buttonprinter32.png" />
+    <Content Include="Images\buttonreddet.png" />
+    <Content Include="Images\buttonrefresh.png" />
+    <Content Include="Images\buttonrefresh32.png" />
+    <Content Include="Images\buttonright.png" />
+    <Content Include="Images\buttonsave.png" />
+    <Content Include="Images\buttonsave32.png" />
+    <Content Include="Images\buttonsearch.png" />
+    <Content Include="Images\buttontrash.png" />
+    <Content Include="Images\buttontrash32.png" />
+    <Content Include="Images\buttontumu.png" />
+    <Content Include="Bosch.css" />
+    <Content Include="TSSTalep.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60570</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60570/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

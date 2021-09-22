@@ -1,0 +1,63 @@
+﻿.baslik {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    font-weight:bold;
+    color: white;
+    background-color: darkorange;
+}
+.dropdownmenu {
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color:black;
+    background-color: white;
+}
+
+.textbox {
+    border-color: gainsboro;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color: black;
+    background-color: white;
+}
+
+.labelbox {
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color: white;
+    background-color: cornflowerblue;
+    height:20px;
+}
+
+.myChekAllCheckBox {
+    padding: 4px 10px;
+    display: none;
+}
+
+    .myChekAllCheckBox:hover {
+        background-color: #c2c2c2;
+    }
+
+    .myChekAllCheckBox > label {
+        margin-left: -4px;
+    }
+
+
+.rlbCheckAllItems {
+    display: none;
+    visibility: hidden;
+}
+
+/* a custom class is added with JavaScript to the container of the listbox that loads items for the filter on demand */
+.rmItem.rmTemplate.rgFilterListMenu.rgHCMFilter .rlbGroup.lbLoadingSign {
+    background-image: url('loading.gif');
+    background-position: center center;
+    background-repeat: no-repeat no-repeat;
+}

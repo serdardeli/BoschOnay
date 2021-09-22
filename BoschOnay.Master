@@ -1,0 +1,94 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="BoschOnay.master.vb" Inherits="BoschOnay.BoschOnay" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<%--<!DOCTYPE html>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%: Page.Title %>- BoschOnay</title>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <link rel="Stylesheet" type="text/css" href="Bosch.css" />
+
+    <style type="text/css">
+        html, body, form {
+            overflow: hidden;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .auto-style1 {
+            height: 30px;
+        }
+
+        .auto-style2 {
+            width: 100%;
+            height: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        function Degistir() {
+            var quit = confirm("Bilgileri kaydetmek istiyor musunuz? ");
+            if (quit) return true;
+            return false;
+        }
+        function Cikis() {
+            var quit = confirm("Programdan çıkmak istiyormusunuz?");
+            if (quit) window.open('', '_self').close();
+        }
+    </script>
+</head>
+<body style="background-color: cornflowerblue" onkeydown="return (event.keyCode!=13)">
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+                <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+            </Scripts>
+        </telerik:RadScriptManager>
+        <telerik:RadStyleSheetManager ID="RadStyleSheetManager1" runat="server"></telerik:RadStyleSheetManager>
+        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" ShowChooser="false" Skin="Office2010Blue"></telerik:RadSkinManager>
+        <table style="width: 100%; height: 100%; color: white; padding: 0px 10px 10px 10px;">
+            <tr>
+                <td>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="font-size: 28px; color: white; font-weight: bold; vertical-align: bottom; font-family: 'Segoe UI';" class="auto-style1">
+
+                                <asp:LinkButton runat="server" ID="anaekran" Text="AnaSayfa" PostBackUrl="~/FMainPage2.aspx" ForeColor="White">MyTime </asp:LinkButton>
+                                <%-- <asp:ImageButton ID="ImageButton1" runat="server" ImageAlign="Middle" ImageUrl="images/mytime.png" PostBackUrl="~/FMainPage2.aspx" />--%>
+                            </td>
+
+                            <%--<td style="vertical-align: bottom;">
+                                <asp:LinkButton runat="server" ID="anaekran" Text="AnaSayfa" PostBackUrl="~/FMainPage2.aspx" ForeColor="White"></asp:LinkButton>
+                            </td>--%>
+                            <td style="font-family: 'Segoe UI'; font-size: 15px; vertical-align: Bottom; padding-bottom: 4px; padding-left: 10px; color: white;" class="auto-style1">
+                                <asp:Label ID="Label1" runat="server" Text="Mesai ve İzin Onay" Width="400px"></asp:Label></td>
+                            <td style="font-family: 'Segoe UI'; font-size: 12px; vertical-align: bottom; padding-bottom: 4px; text-align: right; padding-right: 15px" class="auto-style2">Kullanıcı :
+                                <asp:Label ID="LoginUser" runat="server" Font-Size="11px" Text="zeki.gultekin"></asp:Label>
+                            </td>
+                            <td style="text-align: right; vertical-align: central;" class="auto-style1">
+                                <telerik:RadMenu ID="RadMenu1" runat="server" BorderStyle="None">
+                                    <Items>
+                                        <telerik:RadMenuItem runat="server" PostBack="false" Text="Menü">
+                                        </telerik:RadMenuItem>
+                                    </Items>
+                                </telerik:RadMenu>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 100%; width: 100%; border-color: lightgray; border-style: solid; border-width: thin; background-color: white;">
+                    <asp:ContentPlaceHolder runat="server" ID="MainContent">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
